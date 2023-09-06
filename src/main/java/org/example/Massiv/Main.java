@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Massiv;
 
 import java.util.Random;
 
