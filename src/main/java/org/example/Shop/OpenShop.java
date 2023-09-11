@@ -13,9 +13,9 @@ public class OpenShop {
         shopManager.addProduct(new Product("Куртка2", ProductCategory.Clothing, 219.99, Currency.EUR, Size.XXl));
         shopManager.addProduct(new Product("Куртка3", ProductCategory.Clothing, 100.00, Currency.EUR, Size.S));
 
-        shopManager.addProduct(new Product("Джинсы1", ProductCategory.Jeans, 20.00, Currency.EUR, Size.L));
-        shopManager.addProduct(new Product("Джинсы2", ProductCategory.Jeans, 24.99, Currency.EUR, Size.M));
-        shopManager.addProduct(new Product("Джинсы3", ProductCategory.Jeans, 50.00, Currency.EUR, Size.S));
+        shopManager.addProduct(new Product("Джинсы1", ProductCategory.Jeans, 20.00, Currency.NZD, Size.L));
+        shopManager.addProduct(new Product("Джинсы2", ProductCategory.Jeans, 24.99, Currency.NZD, Size.M));
+        shopManager.addProduct(new Product("Джинсы3", ProductCategory.Jeans, 50.00, Currency.NZD, Size.S));
 
         shopManager.getProductsByCategory(ProductCategory.Clothing);
         System.out.println();
