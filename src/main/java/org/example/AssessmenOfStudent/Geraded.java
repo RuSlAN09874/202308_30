@@ -1,5 +1,5 @@
 package org.example.AssessmenOfStudent;
 
-public interface Graded {
+public interface Geraded {
     Grade getGrade();
 }

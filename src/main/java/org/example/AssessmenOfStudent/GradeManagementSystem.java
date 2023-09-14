@@ -1,7 +1,7 @@
 package org.example.AssessmenOfStudent;
 
 public class GradeManagementSystem {
-   private Student[] students;
+    private Student[] students;
     private Teacher[] teachers;
 
     public GradeManagementSystem(Student[] students, Teacher[] teachers) {
@@ -25,13 +25,23 @@ public class GradeManagementSystem {
         this.teachers = teachers;
     }
     public void processStudents(){
-        for (Student student: this.students);
+        for (Student student: this.students){
+            System.out.println(student.getDescription());
+        }
     }
 
-    public void processTeachers(){
-        for (Teacher teacher: this.teachers);
+    public void processTeachers() {
+        for (Teacher teacher : this.teachers) {
+            System.out.println(teacher.getDescription());;
+        }
     }
 
+    public void gradeStudents(Teacher teacher, Student[] students) {
+        // прохожусть циклом по массиву students выставляя для каждого студента оценку.
+        for (Student student : students) {
+            teacher.gradeStudent(student); // Вызвал методот gradeStudent(student).
+        }
+    }
 }
 
 

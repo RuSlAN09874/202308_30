@@ -1,29 +1,33 @@
 package org.example.AssessmenOfStudent;
 
-public class Student extends Person implements Graded{
-    Grade grade;
+public class Student extends Person implements Geraded {
+    private Grade grade;
 
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public int getAge() {
-        return super.getAge();
+    public Student(String name, int age, Grade grade) {
+        super(name, age);
+        this.grade = grade;
     }
 
     public Student(String name, int age) {
         super(name, age);
     }
 
-    @Override
-    public Grade getGrade() {
-        return null;
-    }
 
     public void setGrade(Grade grade) {
         this.grade = grade;
     }
-}
 
+    @Override
+    public String getDescription() {
+        if (grade == null) {
+            return "Name: " + getName() + ", Age: " + getAge() ;
+        } else {
+            return "Name: " + getName() + ", Age: " + getAge() + ", Assessment: " + grade;
+        }
+    }
+
+    @Override
+    public Grade getGrade() {
+        return grade;
+    }
+}

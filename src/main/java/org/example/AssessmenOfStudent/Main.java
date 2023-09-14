@@ -9,10 +9,20 @@ public class Main {
 
         Student[] students = {student1,student2,student3,student4};
 
-        Teacher teacher1 = new Teacher("Atoliy", 45);
-        Teacher teacher2 = new Teacher("Vladimir", 54);
+        Teacher teacher1 = new Teacher("Anatoliy", 45,Grade.C);
+        Teacher teacher2 = new Teacher("Vladimir", 54, Grade.A);
 
         Teacher[] teachers = {teacher1,teacher2};
+
+        GradeManagementSystem gradeManagementSystem = new GradeManagementSystem(students,teachers);
+        gradeManagementSystem.processTeachers();
+        System.out.println();
+        gradeManagementSystem.gradeStudents(teacher1, students);
+        gradeManagementSystem.gradeStudents(teacher1, students);
+        System.out.println();
+        gradeManagementSystem.processStudents();
+        gradeManagementSystem.gradeStudents(teacher2, students);
+        gradeManagementSystem.gradeStudents(teacher2, students);
 
 
     }

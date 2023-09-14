@@ -7,8 +7,4 @@ public enum Grade {
     D,
     F;
 
-    @Override
-    public String toString() {
-        return "Grade{}";
-    }
 }
