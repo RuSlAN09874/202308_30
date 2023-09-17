@@ -223,9 +223,10 @@ public class Task13_09 {
             }
         }
     }
+
     //Создать ArrayList с объектами вашего собственного класса и вывести только те,
     //                 которые удовлетворяют определенному условию.
-    public void myClass(){
+    public void myClass() {
         Book book1 = new Book("AAAA", "MayBook1", 1980, 90);
         Book book2 = new Book("VVVV", "MayBook2", 1995, 80);
         Book book3 = new Book("TTTT", "MayBook3", 2001, 100);
@@ -240,5 +241,52 @@ public class Task13_09 {
             System.out.println(book);
         }
     }
+
+    //Уровень сложности 8 из 10:
+    //Перебрать ArrayList<Integer> и найти сумму квадратов всех элементов.
+    public void getSumSquar() {
+        ArrayList<Integer> number = new ArrayList<>();
+        number.add(1);
+        number.add(2);
+        number.add(3);
+        number.add(4);
+        int sumOfSquar = 0;
+        for (int num : number) {
+            sumOfSquar += num * num;
+        }
+        System.out.println("Сумма квадратов всех элементов: " + sumOfSquar);
+    }
+
+    //Перебрать LinkedList<Integer> и вычислить произведение всех элементов.
+    public void getAllElement() {
+        LinkedList<Integer> number = new LinkedList<>();
+        number.add(1);
+        number.add(2);
+        number.add(3);
+        number.add(4);
+        int n = 1;
+        for (int num: number){
+            n = n * num;
+        }
+        System.out.println("Все элементы: " + n);
+    }
+   //Перебрать ArrayList<String> и найти самую короткую строку.
+    public void getShortString() {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("car");
+        strings.add("Java");
+        strings.add("Coding");
+
+        String shortString = strings.get(0);
+        for (String st: strings){
+            if (st.length() < shortString.length()) {
+                shortString = st;
+            }
+        }
+        System.out.println("Сама короткая строка: " + shortString);
+    }
+
+
 }
 
