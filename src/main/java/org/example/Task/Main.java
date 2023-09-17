@@ -5,18 +5,15 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        Book book1 = new Book("AAAA", "MayBook1", 1980, 90);
-        Book book2 = new Book("VVVV", "MayBook2", 1995, 80);
-        Book book3 = new Book("TTTT", "MayBook3", 2001, 100);
-        LinkedList<Book> books = new LinkedList<>();
-        books.add(book1);
-        books.add(book2);
-        books.add(book3);
-        int sumPage = 90;
-        books.removeIf(book -> book.getPage() < sumPage);
-        for (Book book : books) {
-            System.out.println(book);
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("Co");
+        strings.add("lor: ");
+        strings.add("Blue");
+        String mergeSt = "";
+        for (int i = 0; i < strings.size(); i++) {
+            mergeSt = mergeSt + strings.get(i);
         }
+        System.out.println(mergeSt);
     }
 }
 
