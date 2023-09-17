@@ -126,7 +126,7 @@ public class Task13_09 {
         int index = -1;//переменная для хранения индекса элем.(-1 указывает что элемент еще не найден).
         for (int i = 0; i < stLink.size(); i++) {
             String currentSt = stLink.get(i);// получаю текующий элент из списка с помощью метода .get();
-            if (currentSt.equals(stSearch));// проверка на то что равен ли currentSt строке stSearch.
+            if (currentSt.equals(stSearch)) ;// проверка на то что равен ли currentSt строке stSearch.
             index = i;
             break;
         }
@@ -136,7 +136,7 @@ public class Task13_09 {
     }
 
     //Создать LinkedList с объектами вашего собственного класса и удалить все элементы,
-   //                  удовлетворяющие определенному условию.
+    //                  удовлетворяющие определенному условию.
     public void getDelet() {
         Book book1 = new Book("AAAA", "MayBook1", 1980, 90);
         Book book2 = new Book("VVVV", "MayBook2", 1995, 80);
@@ -152,9 +152,10 @@ public class Task13_09 {
             System.out.println(book);
         }
     }
+
     //Уровень сложности 7 из 10:
     //Перебрать ArrayList<Integer> и удалить все четные числа.
-    public void getDeletEven(){
+    public void getDeletEven() {
         ArrayList<Integer> number = new ArrayList<>();
         number.add(1);
         number.add(2);
@@ -162,13 +163,14 @@ public class Task13_09 {
         number.add(4);
         number.add(5);
         for (int i = 0; i < number.size(); i++) {
-            if (number.get(i) % 2 == 0){//проверяю является ли число четным.Метод get(i)для получения элем по индексу.
+            if (number.get(i) % 2 == 0) {//проверяю является ли число четным.Метод get(i)для получения элем по индексу.
                 number.remove(i);// удаление четного числа из списка.
                 i--;//уменшаю индекс что бы не пропустить элемент.
             }
         }
         System.out.println(number);
     }
+
     //Перебрать LinkedList<Integer> и заменить все элементы, кратные 3, на нули.
     public void geEelementChange() {
         LinkedList<Integer> num = new LinkedList<>();
@@ -184,19 +186,59 @@ public class Task13_09 {
         }
         System.out.println(num);
     }
-    //Перебрать ArrayList<String> и объединить все элементы в одну строку.
-        public void getStringMerge(){
-            ArrayList<String> strings = new ArrayList<>();
-            strings.add("Co");
-            strings.add("lor: ");
-            strings.add("Blue");
-            String mergeSt = "";
-            for (int i = 0; i < strings.size(); i++) {
-                mergeSt = mergeSt + strings.get(i);//обьединение строк.
-            }
-            System.out.println(mergeSt);
-        }
-    //Перебрать LinkedList<String> и удалить все элементы, содержащие определенную подстроку.
 
+    //Перебрать ArrayList<String> и объединить все элементы в одну строку.
+    public void getStringMerge() {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("Co");
+        strings.add("lor: ");
+        strings.add("Blue");
+        String mergeSt = "";
+        for (int i = 0; i < strings.size(); i++) {
+            mergeSt = mergeSt + strings.get(i);//обьединение строк.
+        }
+        System.out.println(mergeSt);
+    }
+
+    //Перебрать LinkedList<String> и удалить все элементы, содержащие определенную подстроку.
+    public void getDelElements() {
+        LinkedList<String> strings = new LinkedList<>();
+        strings.add("Red");
+        strings.add("Blue");
+        strings.add("White");
+        strings.add("Yellow");
+        String delet = "Book";
+        for (String str : strings) {
+            System.out.println(str);
+        }
+        for (int i = 0; i < strings.size(); i++) {
+            String elemSt = strings.get(i);
+            if (elemSt.contains(delet)) {
+                strings.remove(i);
+                i--;
+            }
+            System.out.println("Ноый массив из строк:");
+            for (String newString : strings) {
+                System.out.println(newString);
+            }
+        }
+    }
+    //Создать ArrayList с объектами вашего собственного класса и вывести только те,
+    //                 которые удовлетворяют определенному условию.
+    public void myClass(){
+        Book book1 = new Book("AAAA", "MayBook1", 1980, 90);
+        Book book2 = new Book("VVVV", "MayBook2", 1995, 80);
+        Book book3 = new Book("TTTT", "MayBook3", 2001, 100);
+        LinkedList<Book> books = new LinkedList<>();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        int sumPage = 80;//передаю значение страниц в книге которые хочу оставить и меньше этого указаного знач.
+        books.removeIf(book -> book.getPage() > sumPage); //removeIf - это функция которая позволяет
+        //удалять элементы из списка, удовлетворяющие определенное условие(количество страниц).
+        for (Book book : books) {//использую цикла for-each для хранения каждого элемента в books.
+            System.out.println(book);
+        }
+    }
 }
 
