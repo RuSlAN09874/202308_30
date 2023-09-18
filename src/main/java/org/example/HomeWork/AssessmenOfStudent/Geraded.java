@@ -1,4 +1,4 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
 public interface Geraded {
     Grade getGrade();

@@ -1,9 +1,9 @@
-package org.example.Task;
+package org.example.AdditionalTasks.Task13_09_23;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Task13_09 {
+public class Task {
     //Уровень сложности 5 из 10:
     //Найти сумму всех элементов ArrayList<Integer>.
     public void getSum() {
@@ -24,7 +24,7 @@ public class Task13_09 {
         number.add(12);
         number.add(123);
         number.add(19);
-        int mdNum = 0;
+        int mdNum;
         int sum = 0;
         for (Integer medium : number) {
             sum = sum + medium;

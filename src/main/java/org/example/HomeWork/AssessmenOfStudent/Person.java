@@ -1,8 +1,8 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
 public abstract class Person {
     String name;
-     int age;
+    int age;
 
     public Person(String name, int age) {
         this.name = name;

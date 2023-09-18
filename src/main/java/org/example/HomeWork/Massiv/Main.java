@@ -1,4 +1,4 @@
-package org.example.Massiv;
+package org.example.HomeWork.Massiv;
 
 import java.util.Random;
 import java.util.Scanner;

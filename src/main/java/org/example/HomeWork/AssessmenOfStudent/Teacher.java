@@ -1,6 +1,6 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
-public class Teacher extends Person{
+public class Teacher extends Person {
     private Grade teacherGrade;
 
     public Teacher(String name, int age, Grade teacherGrade) {

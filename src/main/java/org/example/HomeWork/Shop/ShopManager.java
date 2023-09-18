@@ -1,4 +1,4 @@
-package org.example.Shop;
+package org.example.HomeWork.Shop;
 
 import java.util.ArrayList;
 import java.util.List;

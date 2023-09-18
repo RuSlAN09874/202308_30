@@ -1,4 +1,4 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,14 +7,14 @@ public class Main {
         Student student3 = new Student("Misha", 29);
         Student student4 = new Student("Maria", 21);
 
-        Student[] students = {student1,student2,student3,student4};
+        Student[] students = {student1, student2, student3, student4};
 
-        Teacher teacher1 = new Teacher("Anatoliy", 45,Grade.C);
+        Teacher teacher1 = new Teacher("Anatoliy", 45, Grade.C);
         Teacher teacher2 = new Teacher("Vladimir", 54, Grade.A);
 
-        Teacher[] teachers = {teacher1,teacher2};
+        Teacher[] teachers = {teacher1, teacher2};
 
-        GradeManagementSystem gradeManagementSystem = new GradeManagementSystem(students,teachers);
+        GradeManagementSystem gradeManagementSystem = new GradeManagementSystem(students, teachers);
         gradeManagementSystem.processTeachers();
         System.out.println();
         gradeManagementSystem.gradeStudents(teacher1, students);

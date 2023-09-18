@@ -1,4 +1,4 @@
-package org.example.Shop;
+package org.example.HomeWork.Shop;
 
 public enum Currency {
     USD,

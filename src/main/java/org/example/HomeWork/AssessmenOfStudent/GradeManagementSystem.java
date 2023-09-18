@@ -1,4 +1,4 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
 public class GradeManagementSystem {
     private Student[] students;
@@ -24,15 +24,17 @@ public class GradeManagementSystem {
     public void setTeachers(Teacher[] teachers) {
         this.teachers = teachers;
     }
-    public void processStudents(){
-        for (Student student: this.students){
+
+    public void processStudents() {
+        for (Student student : this.students) {
             System.out.println(student.getDescription());
         }
     }
 
     public void processTeachers() {
         for (Teacher teacher : this.teachers) {
-            System.out.println(teacher.getDescription());;
+            System.out.println(teacher.getDescription());
+            ;
         }
     }
 

@@ -1,4 +1,4 @@
-package org.example.AssessmenOfStudent;
+package org.example.HomeWork.AssessmenOfStudent;
 
 public class Student extends Person implements Geraded {
     private Grade grade;
@@ -20,7 +20,7 @@ public class Student extends Person implements Geraded {
     @Override
     public String getDescription() {
         if (grade == null) {
-            return "Name: " + getName() + ", Age: " + getAge() ;
+            return "Name: " + getName() + ", Age: " + getAge();
         } else {
             return "Name: " + getName() + ", Age: " + getAge() + ", Assessment: " + grade;
         }
