@@ -135,9 +135,15 @@ public class Task {
         TreeMap<Integer, String> treeMap = new TreeMap<>();
         treeMap.put(1, "Apple");
         treeMap.put(2, "Kiwi");
-        treeMap.put(1, "Mango");
-        treeMap.put(1, "Almond");
+        treeMap.put(3, "Mango");
+        treeMap.put(4, "Almond");
+       String st = "";
+            for (int i = 0; i < treeMap.size(); i++) {
+              st = treeMap.get(i);
+                if (st.toUpperCase().startsWith("A"));
+            }
 
+        System.out.println(st);
     }
 }
 
