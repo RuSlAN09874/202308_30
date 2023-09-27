@@ -1,4 +1,4 @@
-package org.example.AdditionalTasks.Task18_09_23;
+package org.example.additional_task.task18_09_23;
 
 import java.util.TreeMap;
 

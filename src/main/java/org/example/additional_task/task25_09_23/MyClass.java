@@ -1,4 +1,4 @@
-package org.example.AdditionalTasks.task25_09_23;
+package org.example.additional_task.task25_09_23;
 
 public class MyClass {
 private int Value;
