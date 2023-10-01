@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Книга: " + book1.getBookTitle());
         System.out.println("Пользователь: " + user1.getUserName());
 
-// Вывести информацию о зарезервированной книге
+
         System.out.println("Книга зарезервирована:");
         System.out.println("Книга: " + book2.getBookTitle());
         System.out.println("Пользователь: " + user2.getUserName());
