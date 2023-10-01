@@ -6,11 +6,11 @@ public class LibraryUser {
     private int userId;
     private String userName;
     private String userEmail;
-    private int userPhone;
+    private String userPhone;
     private List<Book> userBooksBorrowed;
     private Set<Book> userBooksReserved;
 
-    public LibraryUser(int userId, String userName, String userEmail, int userPhone) {
+    public LibraryUser(String userName, String userEmail, String userPhone) {
         Random random = new Random();
         this.userId = random.nextInt(1000);
         this.userName = userName;
@@ -20,6 +20,22 @@ public class LibraryUser {
         this.userBooksReserved = new HashSet<>();
     }
 
+
+    public List<Book> getUserBooksBorrowed() {
+        return userBooksBorrowed;
+    }
+
+    public void setUserBooksBorrowed(List<Book> userBooksBorrowed) {
+        this.userBooksBorrowed = userBooksBorrowed;
+    }
+
+    public Set<Book> getUserBooksReserved() {
+        return userBooksReserved;
+    }
+
+    public void setUserBooksReserved(Set<Book> userBooksReserved) {
+        this.userBooksReserved = userBooksReserved;
+    }
 
     public int getUserId() {
         return userId;
@@ -45,28 +61,11 @@ public class LibraryUser {
         this.userEmail = userEmail;
     }
 
-    public int getUserPhone() {
+    public String getUserPhone() {
         return userPhone;
     }
 
-    public void setUserPhone(int userPhone) {
+    public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
-
-    public List<Book> getUserBooksBorrowed() {
-        return userBooksBorrowed;
-    }
-
-    public void setUserBooksBorrowed(List<Book> userBooksBorrowed) {
-        this.userBooksBorrowed = userBooksBorrowed;
-    }
-
-    public Set<Book> getUserBooksReserved() {
-        return userBooksReserved;
-    }
-
-    public void setUserBooksReserved(Set<Book> userBooksReserved) {
-        this.userBooksReserved = userBooksReserved;
-    }
 }
-

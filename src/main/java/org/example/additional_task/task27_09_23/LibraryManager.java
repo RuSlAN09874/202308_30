@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
 public class LibraryManager {
     private List<Book> liberBook;
     private List<LibraryUser> libraryUsers;
@@ -50,21 +51,37 @@ public class LibraryManager {
     // Метод, который позволяет пользователю взять книгу в аренду.
     public void borrowBook(LibraryUser user, Book book) {
         if (book.isBookAvailable()) {
-            book.setBookAvailable(false);
+            book.setBookAvailable(true);
+            book.setBorrowed(true);
             user.getUserBooksBorrowed().add(book);
-            System.out.println("Книга \"" + book.getBookTitle() + "Взята в аренду пользователем: " + user.getUserName());
+            System.out.println("Книга \"" + book.getBookTitle() + " уже взята в аренду пользователем: " + user.getUserName());
         } else {
-            System.out.println("Книга не моджет быть доступна для аренды! " + book.getBookTitle());
+            System.out.println("Книга не может быть доступна для аренды! " + book.getBookTitle());
         }
     }
 
     //  Метод, который позволяет пользователю зарезервировать книгу.
     public void reserveBook(LibraryUser user, Book book) {
-            if (book.isBookAvailable()) {
-                user.getUserBooksReserved().add(book);
-                System.out.println("Книга: " + book.getBookTitle() + " Зарезервирована пользователем: " + user.getUserName());
-            } else {
-                System.out.println("Эта книга уже зарезервирована." + book.getBookTitle());
-            }
+        if (book.isBookAvailable()) {
+            user.getUserBooksReserved().add(book);
+            System.out.println("Книга: " + book.getBookTitle() + " Зарезервирована пользователем: " + user.getUserName());
+        } else {
+            System.out.println("Эта книга уже зарезервирована." + book.getBookTitle());
+        }
+
     }
+
+    public void returnBook(LibraryUser user1, Book book1) {
+        if (user1.getUserBooksBorrowed().contains(book1)) {
+            book1.setBookAvailable(true);
+            book1.setOwner(null);
+            book1.setBorrowed(true);
+            user1.getUserBooksBorrowed().remove(book1); // Удаление из списка пользователя
+            System.out.println("Книга \"" + book1.getBookTitle() + "\" возвращена пользователем: " + user1.getUserName());
+        } else {
+            System.out.println("Эта книга не была взята в аренду пользователем " + user1.getUserName());
+        }
+    }
+
 }
+

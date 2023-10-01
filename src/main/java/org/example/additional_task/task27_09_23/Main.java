@@ -2,31 +2,54 @@ package org.example.additional_task.task27_09_23;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
         LibraryManager libraryManager = new LibraryManager();
 
-        List<Book> listAvailableBooksByGenre = libraryManager.listAvailableBooksByGenre("Детективы");
-        System.out.println("Достоупная книга по жанру Детективы: ");
-        for (Book book : listAvailableBooksByGenre) {
-            System.out.println(book.getBookTitle());
+        //Добавление книги в библиотеку
+        Book book1 = new Book("Name1", "Author1", "Genr1", 2005, true);
+        Book book2 = new Book("Name2", "Author2", "Genr2", 2010, true);
+
+        //Регистрация пользователей
+        LibraryUser user1 = new LibraryUser("user1", "user@gmx.com", "212312331");
+        LibraryUser user2 = new LibraryUser("user2", "user2@gmx.com", "145234212");
+
+
+        Set<String> userEmails = libraryManager.listUserEmailsWithReservedBooks();
+        System.out.println("Пользователи с зарезервированными книгами:");
+        for (String email : userEmails) {
+            System.out.println("Email пользователя: " + email);
         }
 
-//        listUserEmailsWithReservedBooks()
-        //Добавление книги
-        Book newBook = new Book("Name2", "Author2", "Genre2", 1947, true);
+        libraryManager.borrowBook(user1, book1);
+        libraryManager.reserveBook(user2, book2);
 
-        libraryManager.addBookToLibrary(newBook);
+        System.out.println("Книга взята в аренду:");
+        System.out.println("Книга: " + book1.getBookTitle());
+        System.out.println("Пользователь: " + user1.getUserName());
 
-        // Удаление книги
+// Вывести информацию о зарезервированной книге
+        System.out.println("Книга зарезервирована:");
+        System.out.println("Книга: " + book2.getBookTitle());
+        System.out.println("Пользователь: " + user2.getUserName());
 
-        libraryManager.removeBookFromLibrary(newBook);
+        libraryManager.removeBookFromLibrary(book2);
+        libraryManager.returnBook(user1, book1);
 
-        LibraryUser user = new LibraryUser(45,"User1","user1@gmail.com",+2424123);
+        System.out.println("Книга взята в аренду:");
+        System.out.println("Книга: " + book1.getBookTitle());
+        System.out.println("Пользователь: " + user1.getUserName());
 
-        Book reserveBook = new Book("Books3","Author","Детективы",1948,true);
-        System.out.println("Книга зарезервирована: " + reserveBook);
-        libraryManager.reserveBook(user,reserveBook);
+        System.out.println("Книга зарезервирована:");
+        System.out.println("Книга: " + book2.getBookTitle());
+        System.out.println("Пользователь: " + user2.getUserName());
+
+        libraryManager.removeBookFromLibrary(book2);
+        libraryManager.returnBook(user1, book1);
+
+
     }
 }
+

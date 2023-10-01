@@ -10,6 +10,10 @@ public class Book {
     private int bookYear;
     private boolean bookAvailable;
 
+   private LibraryUser owner;
+   private boolean borrowed;
+
+
    public Book(String bookTitle, String bookAuthor, String bookGenre, int bookYear, boolean bookAvailable) {
       Random random = new Random();
       this.bookId = random.nextInt(500);
@@ -78,6 +82,22 @@ public class Book {
               ", bookYear=" + bookYear +
               ", bookAvailable=" + bookAvailable +
               '}';
+   }
+
+   public LibraryUser getOwner() {
+      return owner;
+   }
+
+   public void setOwner(LibraryUser owner) {
+      this.owner = owner;
+   }
+
+   public boolean isBorrowed() {
+      return borrowed;
+   }
+
+   public void setBorrowed(boolean borrowed) {
+      this.borrowed = borrowed;
    }
 }
 
