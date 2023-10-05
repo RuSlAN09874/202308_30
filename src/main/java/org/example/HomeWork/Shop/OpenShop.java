@@ -21,8 +21,4 @@ public class OpenShop {
         System.out.println();
         shopManager.getProductsByPriceRange(20,220, Currency.USD);
     }
-
 }
-
-
-

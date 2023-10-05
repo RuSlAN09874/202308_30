@@ -6,5 +6,4 @@ public enum Grade {
     C,
     D,
     F;
-
 }

@@ -29,5 +29,4 @@ public class Teacher extends Person {
         // присвоение оценки студенту через setGrade.
         student.setGrade(stGrade[grades]);
     }
-
 }

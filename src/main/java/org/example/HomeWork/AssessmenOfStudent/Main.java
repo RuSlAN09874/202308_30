@@ -23,7 +23,5 @@ public class Main {
         gradeManagementSystem.processStudents();
         gradeManagementSystem.gradeStudents(teacher2, students);
         gradeManagementSystem.gradeStudents(teacher2, students);
-
-
     }
 }

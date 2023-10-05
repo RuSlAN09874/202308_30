@@ -286,7 +286,4 @@ public class Task {
         }
         System.out.println("Сама короткая строка: " + shortString);
     }
-
-
 }
-

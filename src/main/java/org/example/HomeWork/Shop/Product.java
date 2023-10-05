@@ -56,5 +56,3 @@ public class Product {
         this.currency = currency;
     }
 }
-
-
