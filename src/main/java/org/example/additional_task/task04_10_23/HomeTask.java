@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class HomeTask {
     public static void main(String[] args) {
@@ -80,9 +79,8 @@ public class HomeTask {
 
         // Получить строку, объединяющую элементы списка через запятую.
         // Не могу понять как работает 83 строка кода (элементы не обьеденились)
-        List<String> elementsLis = Arrays.asList("A", "B", "D");
-        String result = elementsLis.stream()
-                .collect(Collectors.joining(", "));
+        List<String> elementsLis = List.of("ABED");
+        String result = String.join(", ", elementsLis);
         System.out.println("ДЗ не сделанно: " + result);
 
         // Получить список квадратов чисел из другого списка.
@@ -105,7 +103,7 @@ public class HomeTask {
         List<String> list = Arrays.asList("String1", "String2", "String3", "String4", "String5");
         List<String> elemList = list.stream()
                 .limit(3)
-                .sorted((s1, s2) -> s2.compareTo(s1))
+                .sorted(Comparator.reverseOrder())
                 .toList();
         System.out.println("Вывод в обратном порядке: " + elemList);
 
@@ -130,7 +128,5 @@ public class HomeTask {
                 .sorted(Comparator.comparing(User::getAge))
                 .toList();
         System.out.println(filteredUsers);
-
-
     }
 }
