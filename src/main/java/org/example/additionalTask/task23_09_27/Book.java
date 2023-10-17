@@ -1,4 +1,4 @@
-package org.example.additional_task.task27_09_23;
+package org.example.additionalTask.task23_09_27;
 
 import java.util.Random;
 
