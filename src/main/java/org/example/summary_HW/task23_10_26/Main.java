@@ -1,6 +1,4 @@
-package org.example.summary_HW.task_23_10_26;
-
-import com.github.javafaker.Animal;
+package org.example.summary_HW.task23_10_26;
 
 import java.util.List;
 import java.util.Map;

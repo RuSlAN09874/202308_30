@@ -1,4 +1,4 @@
-package org.example.summary_HW.task_23_10_26;
+package org.example.summary_HW.task23_10_26;
 
 import lombok.Data;
 
