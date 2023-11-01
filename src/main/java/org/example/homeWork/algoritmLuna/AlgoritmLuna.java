@@ -11,7 +11,5 @@ public class AlgoritmLuna {
         boolean validCard = isValidCard(getCard);
         System.out.println(validCard);
 
-
     }
-
 }

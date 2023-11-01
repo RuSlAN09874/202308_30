@@ -17,7 +17,7 @@ public class GenereidCard {
         for (int i = 0; i < cvvCard; i++) {
             cvv.append(random.nextInt(10));
         }
-        LocalDate expirationDate = LocalDate.now().plusYears(4);
+        LocalDate expirationDate = LocalDate.now().plusYears(2);
 
         return cardNumber.toString() + cvv.toString() + " "  + expirationDate;
     }
