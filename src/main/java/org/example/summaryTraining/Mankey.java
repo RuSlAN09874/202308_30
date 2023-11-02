@@ -1,4 +1,4 @@
-package org.example.summary_Lesson;
+package org.example.summaryTraining;
 
 public class Mankey {
     public class Monkey {

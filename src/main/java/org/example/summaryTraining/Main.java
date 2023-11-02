@@ -1,9 +1,8 @@
-package org.example.summary_Lesson;
+package org.example.summaryTraining;
 
 import org.example.summary_HW.task.Monkey;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
