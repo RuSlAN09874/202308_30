@@ -1,4 +1,4 @@
-package org.example.summary_HW.task23_11_3;
+package org.example.summary_HW.task23_11_03;
 
 public class Main {
     public static class WrongLoginException extends Exception {
