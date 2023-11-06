@@ -29,7 +29,8 @@ class LibraryTest {
 
     @Test
     void addNullBookTest() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> library.addBook(null));
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> library.addBook(null));
     }
 
     @Test
@@ -41,7 +42,8 @@ class LibraryTest {
 
     @Test
     void removeNullBookTest() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> library.removeBook(null));
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> library.removeBook(null));
     }
 
     @Test
